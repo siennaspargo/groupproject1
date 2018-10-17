@@ -1,6 +1,15 @@
 body {
   background: black;
-  /* background-image: url("../images/nightsky\ copy.jpg"); */
-  color: white;
-  font-style: times;
+  color: black;
+  text-align: center;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
 }

@@ -5,46 +5,147 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>working NASA API example</title>
-
+    <title>COSMIC PINPOINT</title>
+    <!-- Font Import -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <!--Import materialize.css-->
-      <link type="text/css" rel="stylesheet" href="assets/css/materialize.min.css"  media="screen,projection"/>
-    <!-- Style -->
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="assets/css/materialize.min.css" media="screen,projection" />
+    <!-- CSS stylesheet Import -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-
 </head>
 
 <body>
 
+    <!-- Nav Bar -->
+    <nav>
+        <div class="nav-wrapper">
+            <a href="workingNASAimage.html" class="brand-logo">Cosmic Pinpoint</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <!-- <li><a href="sass.html">Sass</a></li>
+                <li><a href="badges.html">Components</a></li>
+                <li><a href="collapsible.html">JavaScript</a></li> -->
+            </ul>
+        </div>
+    </nav>
+
+
+
+
+
+    <!-- stary night sky background -->
+    <div class="parallax-container">
+        <div class="parallax"><img src="assets/images/nightsky.jpg"></div>
+    </div>
+    <div class="section white">
+        <div class="row container">
+            <h2 class="header">Picture of the Day</h2>
+            <h2>by NASA</h2>
+            <!-- <b>API URL:</b>
+            <pre id="reqObject"></pre> -->
+
+            <!-- image of the day -->
+            <img id="apod_img_id" width="600px" />
+
+            <iframe id="apod_vid_id" type="text/html" width="640" height="385" frameborder="0"></iframe>
+            <p id="copyright"></p>
+
+            <h3 id="apod_title"></h3>
+            <p id="apod_explaination"></p>
+            <br />
+
+        </div>
+    </div>
+
+    <!-- Containers to hold dynamic content -->
+    <!-- stary night sky background -->
     <div class="parallax-container">
         <div class="parallax"><img src="assets/images/nightsky.jpg"></div>
     </div>
 
 
 
+    <!-- div for Internation Space Station's Location according to user's IP address -->
+    <div class="section white">
+        <div class="row container">
+            <h2 class="header">IP address retrival + International Space Station Info</h2>
+            <p class="grey-text text-darken-3 lighten-3">
 
-    <b>API URL:</b>
-    <pre id="reqObject"></pre>
+                <!-- table for Satellite's locations -->
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Longitude</th>
+                            <th>Latitude</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <th>Time</th>
+                            <th>Longitude</th>
+                            <th>Latitude</th>
+                        </tr>
+                        <tr>
+                            <th>Time</th>
+                            <th>Longitude</th>
+                            <th>Latitude</th>
+                        </tr>
+                        </tr>
+                        <tr>
+                            <th>Time</th>
+                            <th>Longitude</th>
+                            <th>Latitude</th>
+                        </tr>
+                    </tbody>
+                </table>
+            </p>
+        </div>
+    </div>
 
 
-    <img id="apod_img_id" width="80%" />
-
-    <iframe id="apod_vid_id" type="text/html" width="640" height="385" frameborder="0"></iframe>
-    <p id="copyright"></p>
-
-    <h3 id="apod_title"></h3>
-    <p id="apod_explaination"></p>
-    <br />
-    <b>Return Object:</b>
-    <pre id="returnObject"></pre>
+    <!-- stary night sky background -->
+    <div class="parallax-container">
+        <div class="parallax"><img src="assets/images/nightsky.jpg"></div>
+    </div>
 
 
 
-    <!-- javascript -->
+    <!-- Footer -->
+    <footer class="parallax-container">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Thank You For Visiting!</h5>
+                    <p class="grey-text text-lighten-4">This webpage has utilized 3 APIs, meeting requirements for our
+                        Project 1 assignment at Rutgers Coding Bootcamp. We'd love to hear feedback on this app and
+                        hope you enjoy using it! Stop by our LinkedIn profiles to connect with each of us. </p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Our Team: </h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="https://www.linkedin.com/in/sienna-spargo-534703b8/">Sienna
+                                Spargo</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Jesus Garcia</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Meili Ellis-Tingle</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2018 Copyright
+                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+        </div>
+    </footer>
 
+
+    <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <!-- Materialize Layout Javascript -->
     <script type="text/javascript" src="assets/javascript/materialize.min.js"></script>
+    <!-- Javascript -->
     <script src="assets/javascript/code.js"></script>
 </body>
 
