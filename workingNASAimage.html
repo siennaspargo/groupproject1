@@ -1,33 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>working NASA API example</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="assets/css/materialize.min.css"  media="screen,projection"/>
+    <!-- Style -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
 </head>
+
 <body>
+
+    <div class="parallax-container">
+        <div class="parallax"><img src="assets/images/nightsky.jpg"></div>
+    </div>
+
+
+
 
     <b>API URL:</b>
     <pre id="reqObject"></pre>
-    
-    
-    <img id="apod_img_id" width="250px"/>
-    
+
+
+    <img id="apod_img_id" width="80%" />
+
     <iframe id="apod_vid_id" type="text/html" width="640" height="385" frameborder="0"></iframe>
     <p id="copyright"></p>
-    
+
     <h3 id="apod_title"></h3>
     <p id="apod_explaination"></p>
-    <br/>
+    <br />
     <b>Return Object:</b>
     <pre id="returnObject"></pre>
 
 
 
     <!-- javascript -->
-    
+
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="assets/javascript/code.js"></script>  
+    <script type="text/javascript" src="assets/javascript/materialize.min.js"></script>
+    <script src="assets/javascript/code.js"></script>
 </body>
+
 </html>
