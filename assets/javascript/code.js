@@ -1,4 +1,5 @@
-$(document).ready(function () {
+
+$(document).ready(function() {
 
     var url = "https://api.nasa.gov/planetary/apod?api_key=hAtAfuNTwK1PZNO4O5BYIl0dtSy29QDrt6MPQI4G";
 
@@ -30,5 +31,5 @@ $(document).ready(function () {
     $('.parallax').parallax();
 
   }
-
 );
+
