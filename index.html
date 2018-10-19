@@ -1,33 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>working NASA API example</title>
+    <title>COSMIC PINPOINT</title>
+    <!-- Font Import -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="assets/css/materialize.min.css" media="screen,projection" />
+    <!-- CSS stylesheet Import -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
+
 <body>
 
-    <b>API URL:</b>
-    <pre id="reqObject"></pre>
-    
-    
-    <img id="apod_img_id" width="250px"/>
-    
-    <iframe id="apod_vid_id" type="text/html" width="640" height="385" frameborder="0"></iframe>
-    <p id="copyright"></p>
-    
-    <h3 id="apod_title"></h3>
-    <p id="apod_explaination"></p>
-    <br/>
-    <b>Return Object:</b>
-    <pre id="returnObject"></pre>
+    <!-- header -->
+    <!-- stary night sky background -->
+    <div class="parallax-container">
+        <div class="parallax"><img src="assets/images/nightsky.jpg"></div>
+
+
+        <!-- video background header  -->
+        <!-- * CONFLICTS - conflicts with nightsky.jpg * -->
+        <!-- <div class="parallax">
+        <video autoplay muted loop id="myVideo">
+            <source src="assets/videos/space.mp4" type="video/mp4">
+        </video>
+        </div> -->
+    </div>
+
+
+    <!-- NASAs picture of the day div -->
+
+    <div class="section white">
+        <div class="row container">
+            <h2 class="header">Picture of the Day by NASA</h2>
+            <!-- <b>API URL:</b>
+            <pre id="reqObject"></pre> -->
+
+            <!-- image of the day -->
+            <img id="apod_img_id" width="600px" class="inline-img" />
+
+            <iframe id="apod_vid_id" type="text/html" width="640" height="385" frameborder="0"></iframe>
+            <p id="copyright"></p>
+
+            <h3 id="apod_title"></h3>
+            <p id="apod_explaination"></p>
+            <br />
+
+        </div>
+    </div>
+
+    <!-- Containers to hold dynamic content -->
+    <!-- stary night sky background -->
+    <div class="parallax-container">
+        <div class="parallax"><img src="assets/images/nightsky.jpg"></div>
+    </div>
 
 
 
-    <!-- javascript -->
-    
+    <!-- div for Mars Rover -->
+    <div class="section white">
+        <div class="row container">
+            <h2 class="header">------- MARS ---------</h2>
+            <p class="grey-text text-darken-3 lighten-3">
+
+                <!-- table for Satellite's locations -->
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Longitude</th>
+                            <th>Latitude</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <th>Time</th>
+                            <th>Longitude</th>
+                            <th>Latitude</th>
+                        </tr>
+                        <tr>
+                            <th>Time</th>
+                            <th>Longitude</th>
+                            <th>Latitude</th>
+                        </tr>
+                        </tr>
+                        <tr>
+                            <th>Time</th>
+                            <th>Longitude</th>
+                            <th>Latitude</th>
+                        </tr>
+                    </tbody>
+                </table>
+            </p>
+        </div>
+    </div>
+
+
+    <!-- stary night sky background -->
+    <div class="parallax-container">
+        <div class="parallax"><img src="assets/images/nightsky.jpg"></div>
+    </div>
+
+
+
+
+    <!-- ISS Widget -->
+    <div class="section white">
+        <div class="row container">
+            <h2 class="header">International Space Station</h2>
+            <h2>Spot The Station Widget</h2>
+            <p class="grey-text text-darken-3 lighten-3">
+                <div style='display:inline-block; border: 1px solid #CCC; border-radius: 6px; -webkit-border-radius: 6px; -o-border-radius: 6px; position: relative; overflow: hidden; width: 310px; height: 450px;'><iframe
+                        src='https://spotthestation.nasa.gov/widget/widget2.cfm?theme=2' width='310' height='450'
+                        frameborder='0' class="inline-img"></iframe></div>
+            </p>
+        </div>
+    </div>
+    <div class="parallax-container">
+        <div class="parallax"><img src="assets/images/nightsky.jpg"></div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="parallax-container">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Thank You For Visiting!</h5>
+                    <p class="grey-text text-lighten-4">This webpage utilized APIs, meeting requirements for our
+                        Project 1 assignment at Rutgers Coding Bootcamp. We'd love to hear feedback on this app and
+                        hope you enjoy using it! Stop by our LinkedIn profiles to connect with each of us. </p>
+                    <br>
+                    <p>© Copyright 2018</p>
+                </div>
+                <div class="footer">
+                    <h5 class="white-text">Our Team on LinkedIn: </h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="https://www.linkedin.com/in/sienna-spargo-534703b8/">Sienna
+                                Spargo</a></li>
+                        <li><a class="grey-text text-lighten-3" href="https://www.linkedin.com/in/jesus-garcia-b8739261">Jesus
+                                Garcia</a></li>
+                        <li><a class="grey-text text-lighten-3" href="https://www.linkedin.com/in/meili-ellis-tingle-673980148/">Meili
+                                Ellis-Tingle</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="assets/javascript/code.js"></script>  
+    <!-- Materialize Layout Javascript -->
+    <script type="text/javascript" src="assets/javascript/materialize.min.js"></script>
+    <!-- Javascript -->
+    <script src="assets/javascript/code.js"></script>
+
+
 </body>
+
 </html>
