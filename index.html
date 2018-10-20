@@ -61,11 +61,31 @@
 
 
 
-    <!-- div for Mars Rover -->
+    <!-- div for ISS PASSOVER DATA -->
     <div class="section white">
         <div class="row container">
             <h2 class="header">ISS Passover in Your Area</h2>
             <p class="grey-text text-darken-3 lighten-3">
+                
+                <form id="search-form">
+                        <input id="search-current" type="submit" value="Current Location">
+                </form>
+
+                <!-- JS on .hide .show on click of current location button -->
+                <!-- <div id="tableHere"></div> -->
+
+                <form id="search-form">
+                    <!-- search current location -->
+                    <label for="giphy-input">Search Current Location</label>
+                    <input type="text" id="search-input" class="section white"><br>
+                
+                    <!-- This button will trigger our AJAX call -->
+
+                    <!-- button2 search elsewhere -->
+                    <input id="search-elsewhere" type="submit" value="Search Elsewhere">
+                  </form>
+
+
                 <div id="tableHere"></div>
 
 
@@ -89,16 +109,25 @@
         <div class="row container">
             <h2 class="header">International Space Station</h2>
             <h2>Spot The Station Widget</h2>
-            <p class="grey-text text-darken-3 lighten-3">
+
+
+
+
+
+            <!-- <p class="grey-text text-darken-3 lighten-3">
                 <div style='display:inline-block; border: 1px solid #CCC; border-radius: 6px; -webkit-border-radius: 6px; -o-border-radius: 6px; position: relative; overflow: hidden; width: 310px; height: 450px;'><iframe
                         src='https://spotthestation.nasa.gov/widget/widget2.cfm?theme=2' width='310' height='450'
                         frameborder='0' class="inline-img"></iframe></div>
-            </p>
+            </p> -->
         </div>
     </div>
     <div class="parallax-container">
         <div class="parallax"><img src="assets/images/nightsky.jpg"></div>
     </div>
+
+
+
+
 
 
     <!-- Footer -->
