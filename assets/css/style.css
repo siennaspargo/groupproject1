@@ -63,3 +63,21 @@ footer {
 iframe {
 float: right;
 }
+
+/* for NEOTable */
+#neoTitle{
+  text-align: center;
+  border: 3px;
+}
+
+#neoTable{
+  align-content: center;
+  background: black;
+  margin:1px;
+  color:white;
+
+}
+#neoTitle{
+  color:white;
+  
+}
