@@ -37,14 +37,31 @@
     }
     $("#search-elsewhere").on("click", function getCoorUserI(){
         var cityName = $("#search-input").val(); 
+        var weHaveSuccess = false; 
         var queryURL = " https://nominatim.openstreetmap.org/search/"+ cityName +"?format=json&polygon=1&addressdetails=1";
           $.ajax({
               url: queryURL,
-              method: "GET"
+              method: "GET",
+              success: function(){
+                weHaveSuccess = true; 
+            },
+            error: function(xhr){
+                console.log(xhr.status); 
+            },
+            complete: function(){
+                if(!weHaveSuccess){
+                    alert("Invalid input"); 
+                }
+            }
           })
               .then(function(response){
-                  //console.log(response[0].lat, response[0].lon);
-                  searchElsewhere(response[0].lat, response[0].lon); 
+                  console.log(response); 
+                  if(response.length == 0){
+                      alert("Invalid input."); 
+                  }
+                  else{
+                    searchElsewhere(response[0].lat, response[0].lon); 
+                  }
               })
       });
 
