@@ -42,22 +42,14 @@
           $.ajax({
               url: queryURL,
               method: "GET",
-              success: function(){
-                weHaveSuccess = true; 
-            },
-            error: function(xhr){
-                console.log(xhr.status); 
-            },
-            complete: function(){
-                if(!weHaveSuccess){
-                    alert("Invalid input"); 
-                }
-            }
           })
               .then(function(response){
                   console.log(response); 
                   if(response.length == 0){
-                      alert("Invalid input."); 
+                      //alert("Invalid input."); 
+                      $(".modal").modal(); 
+                      $("#modal1").modal("open");
+                      //$(".modal-trigger").leanModal();  
                   }
                   else{
                     searchElsewhere(response[0].lat, response[0].lon); 
