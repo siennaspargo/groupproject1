@@ -1,5 +1,4 @@
   $(document).ready(function () {
-
     function createTable(response){
         var table = $('<table>').addClass('table');
         var header = $("<tr>");
@@ -36,6 +35,18 @@
         $('#tableHere').append(table);
 
     }
+    $("#search-elsewhere").on("click", function getCoorUserI(){
+        var cityName = $("#search-input").val(); 
+        var queryURL = " https://nominatim.openstreetmap.org/search/"+ cityName +"?format=json&polygon=1&addressdetails=1";
+          $.ajax({
+              url: queryURL,
+              method: "GET"
+          })
+              .then(function(response){
+                  //console.log(response[0].lat, response[0].lon);
+                  searchElsewhere(response[0].lat, response[0].lon); 
+              })
+      });
 
     function handleIpStackResponse(response) {
         resp = response;
@@ -71,14 +82,14 @@
 
       });
 
-      $("#search-elsewhere").on("click", function(){
+        function searchElsewhere(lat,long){
           var weHaveSuccess = false;
           $("#tableHere").text("") 
-          var search = $("#search-input").val(); 
-          search = search.split(","); 
-          lat = search[0];
-          long = search[1]; 
-          console.log(lat, long);
+        //   var search = $("#search-input").val(); 
+        //   search = search.split(","); 
+        //   lat = search[0];
+        //   long = search[1]; 
+          //console.log(lat, long);
           var queryURL = "http://api.open-notify.org/iss-pass.json?lat=" + lat + "&lon=" + long;
         
           $.ajax({
@@ -107,7 +118,7 @@
 
 
           }); 
-      })
-    
+      
+        }
 //getCoor();
 })
