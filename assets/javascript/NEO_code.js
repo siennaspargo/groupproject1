@@ -1,4 +1,4 @@
-    $(document).ready(function () {
+$(document).ready(function () {
 
     function nearEarth() {
         var today = new Date();
@@ -54,20 +54,32 @@
                         var cell5 = row.insertCell(4);
                         var cell6 = row.insertCell(5);
 
-                        cell1.innerHTML = nameA;
-                        cell2.innerHTML = hazmat;
-                        cell3.innerHTML = sizeA;
-                        cell4.innerHTML = speedA;
-                        cell5.innerHTML = distanceA;
-                        cell6.innerHTML = "<a href='" + nasaURL + "'" + "target='_blank'> URL </a>" ;
+                        
+                        if (hazmat == true) {
+                            cell1.innerHTML = "<span style=" + "color:#FF0000><strong>" + nameA + "</strong></span>";
+                            cell2.innerHTML = "<span style=" + "color:#FF0000><strong>" + hazmat + "</strong></span>";
+                            cell3.innerHTML = "<span style=" + "color:#FF0000><strong>" + sizeA + "</strong></span>";
+                            cell4.innerHTML = "<span style=" + "color:#FF0000><strong>" + speedA + "</strong></span>";
+                            cell5.innerHTML = "<span style=" + "color:#FF0000><strong>" + distanceA + "</strong></span>";
+                            cell6.innerHTML = "<a href='" + nasaURL + "'" + "target='_blank'> URL </a>";
+
+                        }
+                        else {
+                            cell1.innerHTML = nameA;
+                            cell2.innerHTML = hazmat;
+                            cell3.innerHTML = sizeA;
+                            cell4.innerHTML = speedA;
+                            cell5.innerHTML = distanceA;
+                            cell6.innerHTML = "<a href='" + nasaURL + "'" + "target='_blank'> URL </a>";
+                        }
 
                     }
-                    
-                neoTable()
+
+                    neoTable()
 
 
                 }
-                
+
 
                 var table = document.getElementById("neoTable");
                 var row = table.insertRow(0);
