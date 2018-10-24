@@ -81,3 +81,20 @@ float: right;
   color:white;
   
 }
+
+.nightsky
+{
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.banner
+{
+  position: absolute;
+ 
+  top: 60px;
+  right: 300px;
+  max-height: auto;
+  max-width: 800px;
+}
+
