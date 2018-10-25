@@ -20,7 +20,7 @@ footer {
   background: black;
   color: white;
   border-top: 2px solid rgb(82, 214, 214);
-  padding: 40px;
+  padding: 60px;
 }
 
 .inline-img {
@@ -91,9 +91,8 @@ float: right;
 .banner
 {
   position: absolute;
- 
   top: 60px;
-  right: 300px;
+  right: 20%;
   max-height: auto;
   max-width: 800px;
 }
