@@ -37,6 +37,8 @@
     }
     $("#search-elsewhere").on("click", function getCoorUserI(){
         var cityName = $("#search-input").val(); 
+        $("#header").html("ISS Passover in " + cityName);
+        $("#search-input").val("");
         var weHaveSuccess = false; 
         var queryURL = " https://nominatim.openstreetmap.org/search/"+ cityName +"?format=json&polygon=1&addressdetails=1";
           $.ajax({
@@ -86,6 +88,7 @@
 
    
       $("#search-current").on("click", function () {
+          $("#header").html("ISS Passover in Your Area");
           $("#tableHere").text("") 
           getCoor();
 
@@ -127,6 +130,9 @@
 
 
           }); 
+      
+        }
+})
       
         }
 //getCoor();
