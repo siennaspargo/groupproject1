@@ -1,5 +1,7 @@
 $(document).ready(function () {
 
+    $('.dropdown-trigger').dropdown();
+
     function nearEarth() {
         var today = new Date();
         var dd = today.getDate();
@@ -17,32 +19,32 @@ $(document).ready(function () {
         })
 
             .then(function (response) {
-                console.log(response);
+                // console.log(response);
 
                 var asteroids = response.near_earth_objects[date]
-                console.log(asteroids.length);
+                // console.log(asteroids.length);
 
 
 
                 for (var i = 0; i < asteroids.length; i++) {
 
                     var nameA = response.near_earth_objects[date][i].name
-                    console.log(nameA)
+                    // console.log(nameA)
 
                     var hazmat = response.near_earth_objects[date][i].is_potentially_hazardous_asteroid
-                    console.log(hazmat);
+                    // console.log(hazmat);
 
                     var sizeA = response.near_earth_objects[date][i].estimated_diameter.meters.estimated_diameter_max
-                    console.log(sizeA);
+                    // console.log(sizeA);
 
                     var speedA = response.near_earth_objects[date][i].close_approach_data[0].relative_velocity.kilometers_per_hour
-                    console.log(speedA);
+                    // console.log(speedA);
 
                     var distanceA = response.near_earth_objects[date][i].close_approach_data[0].miss_distance.kilometers
-                    console.log(distanceA);
+                    // console.log(distanceA);
 
                     var nasaURL = response.near_earth_objects[date][i].nasa_jpl_url
-                    console.log(nasaURL);
+                    // console.log(nasaURL);
 
                     function neoTable() {
                         var table = document.getElementById("neoTable");
@@ -54,7 +56,7 @@ $(document).ready(function () {
                         var cell5 = row.insertCell(4);
                         var cell6 = row.insertCell(5);
 
-                        
+
                         if (hazmat == true) {
                             cell1.innerHTML = "<span style=" + "color:#FF0000><strong>" + nameA + "</strong></span>";
                             cell2.innerHTML = "<span style=" + "color:#FF0000><strong>" + hazmat + "</strong></span>";
@@ -100,4 +102,33 @@ $(document).ready(function () {
     }
 
     nearEarth();
+
+    function marsRover() {
+
+        var rover;
+        $(".dropdown-content").on("click", function (event) {
+            $("#pictureHere").html("")
+            rover = $(event.target).data("rover")
+            console.log(rover)
+            var queryURL = "https://api.nasa.gov/mars-photos/api/v1/rovers/" + rover + "/photos?sol=1000&camera=pancam&api_key=yEo7d7kUAgz1lz8MdKkUFkf57rtYmtU5QltoxUSv"
+            $.ajax({
+                url: queryURL,
+                method: "GET"
+
+            })
+
+                .then(function (response) {
+                    console.log(response);
+                    for (var i = 0; i < 3; i++) {
+                        $("#pictureHere").append("<img src=" + response.photos[i].img_src + ">");
+                    }
+                })
+        })
+
+
+
+    }
+    marsRover();
+
+
 });
