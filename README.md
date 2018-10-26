@@ -8,4 +8,4 @@
 ### Design and Style
 The webpage design is made using Parallax by Materialize. 
 We also added their modal and drop down menu.
-
+We used Adobe Spark to create the Cosmic Pinpoint Banner.
