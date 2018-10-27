@@ -103,3 +103,7 @@ float: right;
   height: 200px;
   border-radius: 2px;
 }
+
+.pictureHere {
+  max-width: 100%;
+}
