@@ -80,8 +80,12 @@
     function getCoor() {
         var queryURL = "http://api.ipstack.com/check?access_key=fdaee2744bdd8dd531effb2b6c9e23da";
         $.ajax({
-            url: queryURL,
-            method: "GET"
+            url: "https://floating-brushlands-91043.herokuapp.com/cors",
+            data:{
+                url: queryURL,
+                key: "6C365355271AF5033FE78FCCE1DA65A85E4193B7A5C95E92F3904ED0407F9D79",
+            },
+            method: "POST"
         })
             .then(handleIpStackResponse)
     }
