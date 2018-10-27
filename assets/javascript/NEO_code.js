@@ -110,7 +110,7 @@ $(document).ready(function () {
             $("#pictureHere").html("")
             rover = $(event.target).data("rover")
             console.log(rover)
-            var queryURL = "https://api.nasa.gov/mars-photos/api/v1/rovers/" + rover + "/photos?sol=1000&camera=pancam&api_key=yEo7d7kUAgz1lz8MdKkUFkf57rtYmtU5QltoxUSv"
+            var queryURL = "https://api.nasa.gov/mars-photos/api/v1/rovers/" + rover + "/photos?sol=1000&api_key=yEo7d7kUAgz1lz8MdKkUFkf57rtYmtU5QltoxUSv"
             $.ajax({
                 url: queryURL,
                 method: "GET"
@@ -120,7 +120,7 @@ $(document).ready(function () {
                 .then(function (response) {
                     console.log(response);
                     for (var i = 0; i < 3; i++) {
-                        $("#pictureHere").append("<img src=" + response.photos[i].img_src + ">");
+                        $("#pictureHere").append("<img style ='max-width: 300px; max-height: auto; margin:25px;'src=" + response.photos[i].img_src + ">");
                     }
                 })
         })
